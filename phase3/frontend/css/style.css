@@ -1,0 +1,59 @@
+/* The page is built with Bootstrap classes. Custom CSS only where Bootstrap
+   does not do the job. */
+
+.summary-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: .5rem;
+  align-items: center;
+}
+
+.toolbar #search {
+  max-width: 14rem;
+}
+
+.toolbar #filter {
+  width: auto;
+}
+
+.chart-wrap {
+  position: relative;
+  height: 300px;
+}
+
+.sortable {
+  cursor: pointer;
+  user-select: none;
+  white-space: nowrap;
+}
+
+.sortable:hover {
+  color: var(--bs-primary);
+}
+
+.caret {
+  font-size: .7em;
+  color: var(--bs-secondary);
+}
+
+@media (max-width: 576px) {
+  .navbar-brand {
+    font-size: 1.4rem;
+  }
+
+  .toolbar #search {
+    max-width: none;
+  }
+
+  .toolbar .form-select,
+  .toolbar .btn {
+    flex: 1 1 8rem;
+  }
+}
